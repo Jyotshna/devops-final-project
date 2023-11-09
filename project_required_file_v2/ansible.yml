@@ -12,7 +12,7 @@
          name: jyotshna7/abctechnologies
          #tag: test
          push: true
-         source: local
+         source: build
       register: out
     - debug:
          var: out  
