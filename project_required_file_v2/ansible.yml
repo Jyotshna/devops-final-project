@@ -9,7 +9,7 @@
       community.docker.docker_image:
          build:
             path: "/home/edureka/Desktop"
-         name: docker.io/jyotshna7/abctechnologies
+         name: jyotshna7/abctechnologies
          #tag: test
          push: true
          source: build
