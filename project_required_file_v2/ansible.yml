@@ -1,8 +1,10 @@
 - hosts: localhost
   become: yes
   tasks:
-    - name: What is my ansible_host
-      debug: var={{ansible_host}}
+    - name: Find out playbooks path
+      shell: pwd
+      register: playbook_path_output
+    - debug: var=playbook_path_output.stdout
     - name: Build an image and push it to a private repo
       community.docker.docker_image:
          build:
