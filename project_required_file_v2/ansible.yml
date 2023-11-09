@@ -1,9 +1,7 @@
 - hosts: localhost
   become: yes
   tasks:
-    - name: What is my inventory_hostname
-      debug: var={{inventory_host}}
-    - name: What is my ansible_hostname
+    - name: What is my ansible_host
       debug: var={{ansible_host}}
     - name: Build an image and push it to a private repo
       community.docker.docker_image:
