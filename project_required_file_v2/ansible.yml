@@ -15,10 +15,10 @@
         - tree
 
     - name: install docker pip package
-        pip:
-          name:
-            - docker
-          state: present
+      pip:
+        name:
+          - docker
+        state: present
     - name: Build an image and push it to a private repo
       community.docker.docker_image:
          build:
